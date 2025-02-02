@@ -175,7 +175,7 @@ cython_debug/
 
 *.pkl
 bin/
-data/
+data/Fraud*
 .venv/
 
 
