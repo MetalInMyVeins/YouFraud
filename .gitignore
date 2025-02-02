@@ -174,5 +174,8 @@ cython_debug/
 .pypirc
 
 *.pkl
+bin/
+data/
+.venv/
 
 
