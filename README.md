@@ -22,8 +22,8 @@ Real-time fraud detection system. This application is supposed to act as a valid
 
 ### Exploratory Data Analysis
 
-- [ ] Create data summary report
-- [ ] Develop dashboard for data visualization
+- [x] Create data summary report
+- [x] Develop dashboard for data visualization
 
 ### Data Preparation
 
@@ -44,7 +44,7 @@ Apply data preprocessing techniques on training data:
   - [ ] Remove irrelevant features
 - [ ] Document data preprocessing steps
 
-- [ ] ### Build a pipeline for data preprocessing to use the same pipeline on test data
+- [ ] Build a pipeline for data preprocessing to use the same pipeline on test data
 
 ### Model Development and Evaluation
 
