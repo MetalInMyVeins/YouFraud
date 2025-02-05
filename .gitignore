@@ -173,7 +173,6 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 
-*.pkl
 bin/
 data/Fraud*
 .venv/

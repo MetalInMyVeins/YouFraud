@@ -27,33 +27,33 @@ Real-time fraud detection system. This application is supposed to act as a valid
 
 ### Data Preparation
 
-- [ ] Split data into training set and test set
+- [x] Split data into training set and test set
 
 Apply data preprocessing techniques on training data:
 
-- [ ] Data Cleaning
-  - [ ] Handling missing values
-  - [ ] Outlier detection and treatment
-  - [ ] Data normalization or standardization
-  - [ ] Encoding categorical variables
-- [ ] Feature Engineering
-  - [ ] Create new features
-  - [ ] Transform existing features
-- [ ] Feature Selection
-  - [ ] Identify relevant features
-  - [ ] Remove irrelevant features
-- [ ] Document data preprocessing steps
+- [x] Data Cleaning
+  - [x] Handling missing values
+  - [x] Outlier detection and treatment
+  - [x] Data normalization or standardization
+  - [x] Encoding categorical variables
+- [x] Feature Engineering
+  - [x] Create new features
+  - [x] Transform existing features
+- [x] Feature Selection
+  - [x] Identify relevant features
+  - [x] Remove irrelevant features
+- [x] Document data preprocessing steps
 
-- [ ] Build a pipeline for data preprocessing to use the same pipeline on test data
+- [x] Build a pipeline for data preprocessing to use the same pipeline on test data
 
 ### Model Development and Evaluation
 
-- [ ] Create baseline model
-- [ ] Experiment with different ML algorithms
-- [ ] Evaluate models with appropriate metrics
-- [ ] Perform hyperparameter tuning and model optimization
-- [ ] Implement ensemble methods for improved performance
-- [ ] Document model development process
+- [x] Create baseline model
+- [x] Experiment with different ML algorithms
+- [x] Evaluate models with appropriate metrics
+- [x] Perform hyperparameter tuning and model optimization
+- [x] Implement ensemble methods for improved performance
+- [x] Document model development process
 
 ### Build Application
 
