@@ -57,8 +57,8 @@ Apply data preprocessing techniques on training data:
 
 ### Build Application
 
-- [ ] Develop user-friendly interface
-  - [ ] Use Flask, FastAPI, Streamlit, Django
+- [X] Develop user-friendly interface
+  - [X] Use Flask, FastAPI, Streamlit, Django
 
 ### Model Deployment
 
