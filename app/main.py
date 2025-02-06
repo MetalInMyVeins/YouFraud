@@ -1,3 +1,4 @@
+# Run: streamlit run app/main.py
 import streamlit as st
 import joblib
 import pandas as pd
