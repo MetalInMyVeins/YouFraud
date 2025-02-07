@@ -176,5 +176,6 @@ cython_debug/
 bin/
 data/Fraud*
 .venv/
+submission
 
 

@@ -111,6 +111,8 @@ normal_transaction = df[df['isFraud'] == 0]
 fraud_transaction = df[df['isFraud'] == 1]
 
 # randomly select 8213 normal transactions
+import random
+random.seed(42)
 normal_transaction = normal_transaction.sample(n=fraud_transaction.shape[0])
 print(pd.DataFrame(normal_transaction['amount']).describe())
 print(pd.DataFrame(fraud_transaction['amount']).describe())
@@ -147,13 +149,22 @@ x_test_scaler = scaler.transform(x_test)
 # Train and evaluate models
 # train and test logistic regression model
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, mean_squared_error
 
 log_reg = LogisticRegression()
 log_reg.fit(x_train_scaler, y_train)
 y_pred = log_reg.predict(x_test_scaler)
-print(f'Logistic regression accuracy: {accuracy_score(y_test, y_pred)}')
-# 0.80
+print(f'Logistic regression accuracy score: {accuracy_score(y_test, y_pred)}')
+print(f'Logistic regression precision score: {precision_score(y_test, y_pred)}')
+print(f'Logistic regression recall score: {recall_score(y_test, y_pred)}')
+print(f'Logistic regression f1 score: {f1_score(y_test, y_pred)}')
+print(f'Logistic regression rmse score: {np.sqrt(mean_squared_error(y_test, y_pred))}\n')
+# Logistic regression accuracy score: 0.8037127206329885
+# Logistic regression precision score: 0.8621200889547813
+# Logistic regression recall score: 0.717016029593095
+# Logistic regression f1 score: 0.7829013800067317
+# Logistic regression rmse score: 0.44304320259655444
+
 
 # train and test random forest model
 from sklearn.ensemble import RandomForestClassifier
@@ -161,8 +172,16 @@ from sklearn.ensemble import RandomForestClassifier
 rf = RandomForestClassifier()
 rf.fit(x_train_scaler, y_train)
 y_pred = rf.predict(x_test_scaler)
-print(f'Random forest accuracy: {accuracy_score(y_test, y_pred)}')
-# 0.98
+print(f'Random forest accuracy score: {accuracy_score(y_test, y_pred)}')
+print(f'Random forest precision score: {precision_score(y_test, y_pred)}')
+print(f'Random forest recall score: {recall_score(y_test, y_pred)}')
+print(f'Random forest f1 score: {f1_score(y_test, y_pred)}')
+print(f'Random forest rmse score: {np.sqrt(mean_squared_error(y_test, y_pred))}\n')
+# Random forest accuracy score: 0.9856968959220938
+# Random forest precision score: 0.9793061472915399
+# Random forest recall score: 0.9919852034525277
+# Random forest f1 score: 0.9856049004594181
+# Random forest rmse score: 0.11959558552850631
 
 # train and test svm model
 from sklearn.svm import SVC
@@ -170,9 +189,16 @@ from sklearn.svm import SVC
 svm = SVC()
 svm.fit(x_train_scaler, y_train)
 y_pred = svm.predict(x_test_scaler)
-print(f'SVM accuracy: {accuracy_score(y_test, y_pred)}')
-# 0.90
-# So we're selecting random forest model.
+print(f'SVM accuracy score: {accuracy_score(y_test, y_pred)}')
+print(f'SVM precision score: {precision_score(y_test, y_pred)}')
+print(f'SVM recall score: {recall_score(y_test, y_pred)}')
+print(f'SVM f1 score: {f1_score(y_test, y_pred)}')
+print(f'SVM rmse score: {np.sqrt(mean_squared_error(y_test, y_pred))}\n')
+# SVM accuracy score: 0.9138770541692027
+# SVM precision score: 0.9442601194426012
+# SVM recall score: 0.8773119605425401
+# SVM f1 score: 0.9095557686161713
+# SVM rmse score: 0.29346711200882003
 
 # %%
 # save model
